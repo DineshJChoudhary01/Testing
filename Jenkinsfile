@@ -32,7 +32,9 @@ pipeline {
                 dir('JavaBackendServiceWithSpringSecurity/target') {
                     bat 'xcopy *.war "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\" /Y'
                 }
-
+                 emailext subject: 'Backend Deployment Successful',
+                        body: 'The backend was successfully deployed.',
+                        to: 'dineshjchoudhary11@gmail.com'
             }
         }
 
