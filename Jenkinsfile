@@ -17,6 +17,14 @@ pipeline {
             }
         }
 
+           stage('Build Backend and Test') {
+            steps {
+                dir('JavaBackendServiceWithSpringSecurity') {
+                    bat 'mvn test
+                }
+            }
+        }
+
          stage('Test Backend') {
             steps {
                 dir('JavaBackendServiceWithSpringSecurity') {

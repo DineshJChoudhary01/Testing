@@ -27,7 +27,7 @@ public class IntegrationTest {
         };
 
         double result = calculationService.calculate(calculationModels);
-        assertEquals(5.0, result, 0.001);
+        assertEquals(5.0, result);
     }
 
 
